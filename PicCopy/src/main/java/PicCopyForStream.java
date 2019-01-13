@@ -6,7 +6,6 @@ public class PicCopyForStream {
     FileInputStream fr;
     FileOutputStream fw;
     String extName;
-
     public PicCopyForStream(String picPath) {
         File file = new File(picPath);
         if (!file.exists()) {
