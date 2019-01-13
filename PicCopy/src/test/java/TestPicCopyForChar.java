@@ -17,18 +17,18 @@ public class TestPicCopyForChar {
         }
     }
     public static void main(String[] args) {
-        PicCopyForStream picCopyForChar = null;
+        PicCopyForStream picCopyForStream = null;
         JFileChooser jFileChooser = new JFileChooser();
 
         int i = jFileChooser.showOpenDialog(null);
         if (i == 0) {
             File selectedFile = jFileChooser.getSelectedFile();
-            picCopyForChar = new PicCopyForStream(selectedFile.getAbsolutePath());
+            picCopyForStream = new PicCopyForStream(selectedFile.getAbsolutePath());
             System.out.println("--"+selectedFile.getAbsolutePath());
             jFileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             int j = jFileChooser.showOpenDialog(null);
             if (j == 0) {
-                picCopyForChar.uploadPic(jFileChooser.getSelectedFile().getPath());
+                picCopyForStream.uploadPic(jFileChooser.getSelectedFile().getPath());
                 System.out.println("---"+jFileChooser.getSelectedFile().getPath());
             }
           // picCopyForChar.close();
