@@ -18,13 +18,13 @@ class TicketOffice implements Runnable {
               // Thread.currentThread().stop();
                 break;
             } else
-                System.out.println(Thread.currentThread().getName() + "售票点买了一张，还是剩下" + --ticketCount + "张票");
+                System.out.println(Thread.currentThread().getName()
+                        + "售票点买了一张，还是剩下" + --ticketCount + "张票");
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-          //  ticketCount--;
         }}
     }
 }
