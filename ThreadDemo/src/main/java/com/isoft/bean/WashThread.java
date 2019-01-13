@@ -9,9 +9,9 @@ public class WashThread implements Runnable {
         while (true){
             try {
                 Thread.sleep(1500);//睡眠状态
-                Scanner sc=new Scanner(System.in);
+   /*             Scanner sc=new Scanner(System.in);
                 System.out.println("是否继续刷杯子");
-                int c=sc.nextInt();
+                int c=sc.nextInt()*/;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
