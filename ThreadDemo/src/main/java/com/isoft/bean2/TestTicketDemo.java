@@ -12,9 +12,11 @@ class TicketOffice implements Runnable {
 
     public void run() {
         while (ticketCount >= 0) {
-            if (ticketCount == 0) {
+            synchronized (obj){
+            if (ticketCount <= 0) {
                 System.out.println("没有票了，停止售卖");
               // Thread.currentThread().stop();
+                break;
             } else
                 System.out.println(Thread.currentThread().getName() + "售票点买了一张，还是剩下" + --ticketCount + "张票");
             try {
@@ -23,7 +25,7 @@ class TicketOffice implements Runnable {
                 e.printStackTrace();
             }
           //  ticketCount--;
-        }
+        }}
     }
 }
 
